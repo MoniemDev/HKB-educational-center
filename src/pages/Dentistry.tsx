@@ -169,12 +169,9 @@ const Dentistry = () => {
                     {courses.map((course, courseIndex) => (
                       <div
                         key={courseIndex}
-                        className="flex items-center justify-between p-3 rounded-lg bg-muted/30 hover:bg-muted/50 transition-smooth cursor-pointer"
+                        className="p-3 rounded-lg bg-muted/30 hover:bg-muted/50 transition-smooth"
                       >
-                        <Button variant="ghost" size="sm" className="text-secondary">
-                          تفاصيل
-                        </Button>
-                        <span className="font-medium text-right flex-1 mr-3">{course}</span>
+                        <span className="font-medium text-right">{course}</span>
                       </div>
                     ))}
                   </div>
