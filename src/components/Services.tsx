@@ -16,7 +16,7 @@ const Services = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <Card className="shadow-card hover:shadow-hover transition-smooth border-2">
             <CardContent className="p-10 text-right">
-              <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 mr-auto">
+              <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                 <GraduationCap className="h-10 w-10 text-primary" />
               </div>
               <h3 className="text-3xl font-bold mb-4">التعليم الطبي</h3>
@@ -24,21 +24,27 @@ const Services = () => {
                 دورات تعليمية شاملة لجميع التخصصات الطبية مع أساتذة متميزين، 
                 بأسلوب مبسط يساعدك على الفهم والتفوق في دراستك
               </p>
-              <ul className="space-y-3 mb-8 text-muted-foreground">
-                <li className="flex items-center justify-end gap-2">
+              <ul className="space-y-3 mb-8 text-muted-foreground text-right">
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
                   <span>محاضرات فيديو عالية الجودة</span>
-                  <div className="w-2 h-2 rounded-full bg-primary" />
                 </li>
-                <li className="flex items-center justify-end gap-2">
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
                   <span>ملفات PDF ومراجع علمية</span>
-                  <div className="w-2 h-2 rounded-full bg-primary" />
                 </li>
-                <li className="flex items-center justify-end gap-2">
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
                   <span>اختبارات وتقييمات دورية</span>
-                  <div className="w-2 h-2 rounded-full bg-primary" />
                 </li>
               </ul>
-              <Button className="w-full gradient-primary text-white">
+              <Button
+                className="w-full gradient-primary text-white"
+                onClick={() => {
+                  const specialtiesSection = document.getElementById('specialties');
+                  specialtiesSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 استكشف الدورات
               </Button>
             </CardContent>
@@ -46,7 +52,7 @@ const Services = () => {
           
           <Card className="shadow-card hover:shadow-hover transition-smooth border-2">
             <CardContent className="p-10 text-right">
-              <div className="w-20 h-20 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6 mr-auto">
+              <div className="w-20 h-20 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6 mx-auto">
                 <Stethoscope className="h-10 w-10 text-secondary" />
               </div>
               <h3 className="text-3xl font-bold mb-4">الاستشارات الطبية</h3>
@@ -54,21 +60,24 @@ const Services = () => {
                 نوفر خدمات استشارات طبية للمرضى مع أطباء متخصصين، 
                 لضمان دعم المجتمع صحياً وتقديم الرعاية اللازمة
               </p>
-              <ul className="space-y-3 mb-8 text-muted-foreground">
-                <li className="flex items-center justify-end gap-2">
+              <ul className="space-y-3 mb-8 text-muted-foreground text-right">
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-secondary flex-shrink-0" />
                   <span>استشارات فورية مع أطباء متخصصين</span>
-                  <div className="w-2 h-2 rounded-full bg-secondary" />
                 </li>
-                <li className="flex items-center justify-end gap-2">
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-secondary flex-shrink-0" />
                   <span>متابعة طبية مستمرة</span>
-                  <div className="w-2 h-2 rounded-full bg-secondary" />
                 </li>
-                <li className="flex items-center justify-end gap-2">
+                <li className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-secondary flex-shrink-0" />
                   <span>سرية وخصوصية تامة</span>
-                  <div className="w-2 h-2 rounded-full bg-secondary" />
                 </li>
               </ul>
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white">
+              <Button
+                className="w-full bg-secondary hover:bg-secondary/90 text-white"
+                onClick={() => window.open('https://wa.me/qr/SCKB4GXG2LACG1', '_blank')}
+              >
                 احجز استشارة
               </Button>
             </CardContent>

@@ -27,9 +27,9 @@ const Footer = () => {
           <div className="text-center md:text-right">
             <h4 className="font-bold mb-3 md:mb-4 text-sm md:text-base">تواصل معنا</h4>
             <ul className="space-y-1 md:space-y-2 text-muted-foreground text-sm md:text-base">
-              <li>البريد: info@hkbmedical.com</li>
-              <li>الهاتف: +123 456 7890</li>
-              <li>العنوان: المملكة العربية السعودية</li>
+              <li>البريد: Hanadbashier@icloud.com</li>
+              <li>الهاتف: +249907215755</li>
+              <li>العنوان: الدقي، بجوار محطة المترو مقابل مستشفى 6 أكتوبر، مصر</li>
             </ul>
             <div className="mt-4 md:mt-6">
               <h4 className="font-bold mb-3 md:mb-4 text-sm md:text-base">تابعنا على وسائل التواصل</h4>

@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Users, BookOpen, Clock, Heart, Home } from "lucide-react";
-import Navbar from "@/components/Navbar";
+import { ArrowLeft, Users, BookOpen, Clock, Heart, ArrowRight } from "lucide-react";
 import Footer from "@/components/Footer";
 import { useNavigate } from "react-router-dom";
 
@@ -35,7 +34,29 @@ const Nursing = () => {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
+      {/* Simple Navigation Header */}
+      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b shadow-sm">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16 md:h-20">
+            <Button
+              variant="ghost"
+              size="lg"
+              onClick={() => navigate("/")}
+              className="hover:bg-primary/10"
+            >
+              <ArrowRight className="ml-2 h-5 w-5" />
+              العودة للرئيسية
+            </Button>
+
+            <div className="flex items-center gap-2 md:gap-3">
+              <h1 className="text-lg md:text-2xl font-bold bg-gradient-to-l from-primary to-secondary bg-clip-text text-transparent">
+                التمريض
+              </h1>
+              <Heart className="h-6 w-6 md:h-8 md:w-8 text-primary" />
+            </div>
+          </div>
+        </div>
+      </nav>
 
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 gradient-hero">
@@ -59,16 +80,13 @@ const Nursing = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="gradient-primary text-white">
+              <Button
+                size="lg"
+                className="gradient-primary text-white"
+                onClick={() => window.open('https://wa.me/qr/SCKB4GXG2LACG1', '_blank')}
+              >
                 ابدأ التعلم الآن
                 <ArrowLeft className="mr-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline">
-                تصفح المنهج
-              </Button>
-              <Button size="lg" variant="outline" onClick={() => navigate("/")}>
-                <Home className="ml-2 h-5 w-5" />
-                العودة للرئيسية
               </Button>
             </div>
           </div>
@@ -162,7 +180,11 @@ const Nursing = () => {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             كن جزءاً من فريق الرعاية الصحية وأحدث فرقاً في حياة المرضى
           </p>
-          <Button size="lg" className="gradient-primary text-white">
+          <Button
+            size="lg"
+            className="gradient-primary text-white"
+            onClick={() => window.open('https://wa.me/qr/SCKB4GXG2LACG1', '_blank')}
+          >
             التسجيل في البرنامج
           </Button>
         </div>

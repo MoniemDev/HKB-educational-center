@@ -1,16 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import logo from "@/assets/logo.jpeg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center gap-2 md:gap-4">
-            <Button className="gradient-primary text-white text-sm md:text-base px-3 py-2 md:px-4 md:py-2">
+            <Button
+              className="gradient-primary text-white text-sm md:text-base px-3 py-2 md:px-4 md:py-2"
+              onClick={() => window.open('https://wa.me/qr/SCKB4GXG2LACG1', '_blank')}
+            >
               انضم الآن
             </Button>
           </div>
@@ -23,13 +29,11 @@ const Navbar = () => {
             <a href="#home" className="hover:text-primary transition-smooth font-medium">الرئيسية</a>
           </div>
 
-          <div className="flex items-center gap-2 md:gap-3">
+          <div className="flex items-center gap-2 md:gap-3 cursor-pointer" onClick={() => navigate("/")}>
             <h1 className="text-lg md:text-2xl font-bold bg-gradient-to-l from-primary to-primary-glow bg-clip-text text-transparent">
               منصة HKB
             </h1>
-            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full gradient-primary flex items-center justify-center text-white font-bold text-sm md:text-base">
-              HKB
-            </div>
+            <img src={logo} alt="HKB Logo" className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover" />
           </div>
 
           <button

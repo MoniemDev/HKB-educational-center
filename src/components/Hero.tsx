@@ -26,17 +26,32 @@ const Hero = () => {
               منصّة متكاملة لتبسيط العلوم الطبية وتوفير بيئة تعليمية احترافية لجميع التخصصات الصحية
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-end pt-4">
-              <Button size="lg" className="gradient-primary text-white shadow-hover transition-smooth hover:scale-105 text-sm md:text-base">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start pt-4">
+              <Button
+                size="lg"
+                className="gradient-primary text-white shadow-hover transition-smooth hover:scale-105 text-sm md:text-base"
+                onClick={() => {
+                  const specialtiesSection = document.getElementById('specialties');
+                  specialtiesSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 ابدأ رحلتك التعليمية
                 <ArrowLeft className="mr-2 h-4 w-4 md:h-5 md:w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-2 hover:bg-accent transition-smooth text-sm md:text-base">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 hover:bg-accent transition-smooth text-sm md:text-base"
+                onClick={() => {
+                  const aboutSection = document.getElementById('about');
+                  aboutSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 تعرّف على المنصة
               </Button>
             </div>
 
-            <div className="flex gap-4 sm:gap-6 md:gap-8 pt-6 md:pt-8 justify-center lg:justify-end">
+            <div className="flex gap-4 sm:gap-6 md:gap-8 pt-6 md:pt-8 justify-center lg:justify-start">
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">+5</div>
                 <div className="text-xs sm:text-sm text-muted-foreground">تخصصات طبية</div>
