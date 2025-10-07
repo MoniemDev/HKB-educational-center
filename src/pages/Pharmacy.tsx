@@ -167,9 +167,10 @@ const Pharmacy = () => {
                   {courses.map((course, courseIndex) => (
                     <div
                       key={courseIndex}
-                      className="p-3 rounded-lg bg-muted/30 hover:bg-muted/50 transition-smooth"
+                      className="flex items-center gap-2 p-3 rounded-lg bg-muted/30 hover:bg-muted/50 transition-smooth"
                     >
-                      <span className="font-medium text-right">{course}</span>
+                      <span className="font-medium text-right flex-1">{course}</span>
+                      <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
                     </div>
                   ))}
                 </CardContent>
